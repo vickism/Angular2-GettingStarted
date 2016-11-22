@@ -6,9 +6,9 @@ import { PipeTransform, Pipe} from '@angular/core';
 
 export class ProductDirectionPipe implements PipeTransform{
 
-transform(value : string, filterBy: string) :string{
-	if(filterBy.length > 0)
-		return value.split("").join("");
+transform(value : string, inverse: boolean) :string{
+	if(inverse)
+		return value.split("").reverse().join("");
 	return value;
 }
 
