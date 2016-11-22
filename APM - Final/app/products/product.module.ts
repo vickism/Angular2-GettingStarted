@@ -7,6 +7,7 @@ import { ProductDetailGuard } from './product-guard.service';
 
 import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
+import { ProductDirectionPipe } from './product-direction.pipe';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ProductListComponent,
     ProductDetailComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ProductDirectionPipe
   ],
   providers: [
     ProductService,
