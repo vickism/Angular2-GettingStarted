@@ -1,5 +1,5 @@
 import { PipeTransform, Pipe} from '@angular/core';
-
+import * as s from 'string';
 @Pipe({
     name: 'camelCase'
 })
@@ -7,9 +7,8 @@ import { PipeTransform, Pipe} from '@angular/core';
 
 export class CamelCasePipe implements PipeTransform{
     transform(value:string):string{
-         return value
-        .replace(/\s(.)/g, function($1) { return $1.toUpperCase(); })
-        .replace(/\s/g, '')
-        .replace(/^(.)/, function($1) { return $1.toLowerCase(); });
+         //return value
+        let d = s(value);
+    return d.slugify().toString();
     };
 }
